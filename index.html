@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wanderly — Your trip, thoughtfully planned</title>
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">✦</span> wanderly</a>
+  <nav><a href="#planner">Trip planner</a><a href="#how">How it works</a></nav>
+  <span class="top-pill">✦ Your next adventure starts here</span>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">LESS PLANNING, MORE WANDERING</p>
+      <h1>Travel that feels<br><em>like you.</em></h1>
+      <p class="hero-sub">Your own little travel expert. Tell us what you love, and we'll shape it into a trip worth remembering.</p>
+      <a class="primary-link" href="#planner">Plan my trip <span>↗</span></a>
+      <div class="social-proof"><span class="avatars">A&nbsp; M&nbsp; R</span><span><b>Made for curious travellers</b><br><small>Thoughtful plans, one destination at a time</small></span></div>
+    </div>
+    <div class="hero-art">
+      <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+      <div class="art-label"><span>✦</span><div><b>Your kind of getaway</b><small>Curated around you</small></div></div>
+      <div class="floating-note">✧&nbsp; Find your somewhere</div>
+    </div>
+  </section>
+  <section class="planner-section" id="planner">
+    <div class="section-heading"><p class="eyebrow">YOUR JOURNEY, YOUR WAY</p><h2>Let's plan something <em>beautiful.</em></h2><p>A few details help us make the most of every moment.</p></div>
+    <form id="trip-form" class="planner-card">
+      <div class="form-grid">
+        <label class="wide">Where do you want to go?<span class="input-wrap">⌖ <input id="destination" required placeholder="e.g. Jaipur, Rajasthan" value="Jaipur, Rajasthan"></span></label>
+        <label>Departure date<input id="start" type="date" required></label>
+        <label>Return date<input id="end" type="date" required></label>
+        <label>Budget per person (₹)<input id="budget" type="number" min="1000" step="500" value="12000" required></label>
+        <label>Travellers<select id="travelers"><option value="1">1 traveller</option><option value="2" selected>2 travellers</option><option value="3">3 travellers</option><option value="4">4 travellers</option><option value="5">5 travellers</option><option value="6">6+ travellers</option></select></label>
+      </div>
+      <fieldset><legend>What are you into?</legend><div class="interests">
+        <label class="interest"><input type="checkbox" value="Culture" checked><span>🏛️ Culture</span></label>
+        <label class="interest"><input type="checkbox" value="Food" checked><span>🍜 Food</span></label>
+        <label class="interest"><input type="checkbox" value="Nature"><span>🌿 Nature</span></label>
+        <label class="interest"><input type="checkbox" value="Adventure"><span>🥾 Adventure</span></label>
+        <label class="interest"><input type="checkbox" value="Shopping"><span>🛍️ Shopping</span></label>
+        <label class="interest"><input type="checkbox" value="Photography"><span>📸 Photography</span></label>
+      </div></fieldset>
+      <button class="submit-btn" type="submit">Generate itinerary <span>✦</span></button>
+      <p class="form-note">A sample plan appears instantly. Costs are estimates, not live quotes.</p>
+    </form>
+  </section>
+  <section id="results" class="results-section hidden">
+    <div class="results-head"><div><p class="eyebrow">YOUR PERSONALIZED PLAN</p><h2 id="result-title">Your itinerary</h2><p id="result-meta"></p></div><div class="result-actions"><button id="save-btn" class="secondary-btn">↓ Save plan</button><button id="print-btn" class="secondary-btn">Print / PDF</button></div></div>
+    <div class="summary-grid" id="summary"></div>
+    <div id="days" class="days-grid"></div>
+  </section>
+  <section class="how-section" id="how"><p class="eyebrow">SIMPLE BY DESIGN</p><h2>From “somewhere” to <em>somewhere special.</em></h2><div class="steps"><article><b>01</b><h3>Tell us your vibe</h3><p>Share your destination, dates, budget and interests.</p></article><article><b>02</b><h3>Get your plan</h3><p>See a day-by-day sample itinerary with cost estimates.</p></article><article><b>03</b><h3>Make it yours</h3><p>Save your plan or print it to take it on the road.</p></article></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">✦</span> wanderly</a><span>Made for your next memorable journey.</span></footer>
+<script src="public/app.js"></script>
+</body></html>
